@@ -1,7 +1,14 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+end
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
-    body: "Had a alright day in coding class today"
+    body: "Had a alright day in coding class today", 
+    topic_id: Topic.last.id
     )
 end
 
@@ -17,14 +24,34 @@ end
 
 puts "5 skill posts created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "My great service",
-    body: "I mowed the lawn at my house and gave my little brother money" ,
-    main_image: "http://placehold.it.com/600x400" ,
+    subtitle: "Ruby on rails",
+    body: "I mowed the lawn at my house and gave my little brother money",
+    main_image: "http://placehold.it.com/600x400",
     thumb_image: "http://placehold.it.com/350x200"
    )
 end
 
-puts "9 portfolio items created"
+puts "8 portfolio items created"
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Angular",
+    body: "I mowed the lawn at my house and gave my little brother money",
+    main_image: "http://placehold.it.com/600x400",
+    thumb_image: "http://placehold.it.com/350x200"
+   )
+end
+
+puts "1 portfolio items created"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}"
+    )
+end
+
+puts "3 technologies created"
