@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/CWright10/wright_view_tool
+  revision: 4e7bbd7f665c6b76fd06f0335c3ed804406ee539
+  specs:
+    wright_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -186,6 +192,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  wright_view_tool!
 
 BUNDLED WITH
    1.13.7
