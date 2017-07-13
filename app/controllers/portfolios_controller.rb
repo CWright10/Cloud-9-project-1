@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
-layout "portfolio"    
+layout "portfolio"   
+access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
 def index
  @portfolio_item = Portfolio.all
@@ -40,7 +41,16 @@ def update
 end
     
 def show
- @portfolio_item = Portfolio.find(params[:id])
+end
+
+def destroy
+  #Destroy/delete the record
+  @portfolio_item.destroy
+  
+  #Redirect
+  respond_to do |format|
+    format.html { redirect_to portfolio_url, notice: "Record was removed" }
+  end
 end
 
 def angular
