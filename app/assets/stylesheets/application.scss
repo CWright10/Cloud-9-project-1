@@ -197,14 +197,13 @@ body {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100%;
+  z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('background.jpg') no-repeat;
+  background: image-url('Fade-To-Black.jpg') no-repeat;
   background-size: cover;
 }
 
 .app-footer {
   color: white;
-  
 }
