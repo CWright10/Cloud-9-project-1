@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "gritter";
 
 /*
  * Globals
@@ -29,7 +30,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  
 }
 body {
   color: #fff;
@@ -200,7 +200,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('Fade-To-Black.jpg') no-repeat;
+  background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
 
