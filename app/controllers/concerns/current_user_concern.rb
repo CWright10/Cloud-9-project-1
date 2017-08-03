@@ -14,3 +14,4 @@ module CurrentUserConcern
     guest
   end
 end
+
